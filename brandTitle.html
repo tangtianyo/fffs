@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="css/brandTitle.css" />
+</head>
+
+<body>
+    <!--顶部部分的布局-->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" title="">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="javascript:void(0);">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+    <!--搜素框-->
+    <section id="form-search">
+        <form action="" class="search">
+            <input type="search" name="" placeholder="请输入内容">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!--主体的内容-->
+    <section id="category">
+        <nav class="product-title">
+            <a href="index.html">首页</a>&gt;
+            <a href="category.html">全部分类</a>&gt;
+        </nav>
+        <div class="paihang">
+            热门品牌排行
+        </div>
+        <div class="row">
+            <ul class="category-title">
+                <!--发送ajax请求数据-->
+            </ul>
+        </div>
+    </section>
+
+    <!--底部的内容-->
+    <footer id="ct100_foot">
+        <div class="foot-top">
+            <a href="javascript:void(0);">登录</a>
+            <a href="javascript:void(0);">注册</a>
+            <a href="javascript:void(0);">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <p>
+                <a href="javascript:void(0);">手机app下载</a>
+                <a href="javascript:void(0);">慢慢买手机版</a> --掌上比价商品
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script type="text/html" id="zhonglei">
+    {{each result}}
+    <li>
+        <div class="xiangxideshang">
+            <a href="brand.html?brandtitleid={{$value.brandTitleId}}">{{$value.brandTitle}}</a>
+            <span></span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/brandTitle.js"></script>

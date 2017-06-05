@@ -1,0 +1,201 @@
+@import 'normalize6.0.scss';
+
+html,body{
+    height: 100%;
+    background-color: #f1f1f1;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+.clearfix::before,.clearfix::after{
+    height: 0;
+    content: '';
+    overflow: hidden;
+    clear: both;
+    display: block;
+}
+.clearfix{
+    zoom:1;
+}
+// 头部信息
+#header{
+    height: 50px;
+    background-color: #f4483e;
+    display: flex;
+    align-items: center;
+    .back{
+        
+        width: 30%;
+        height: 50px;
+        >a{
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+        }
+        a::before{
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+    h1{
+        width: 60%;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 50px;
+        margin: 0;
+    }
+    .home{
+        width: 30%;
+        height: 50px;
+        >a{
+            margin-left: 30px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            background: url('../images/header_app.png')no-repeat center/32px 32px;
+            
+        }
+    }
+}
+
+// 主体内容的布局
+#kfcd{
+    background-color: white;
+    .diancan{
+        text-align: center;
+        color: #999;
+        font-size: 12px;
+        margin: 8px 0;
+    }
+    .kfcd-list{
+        ul{
+            li{
+                border-bottom: 1px solid #e7e7e7;
+                a{
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    // box-sizing: content-box;
+                    padding: 10px;
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: space-between;
+                    .pic{
+                        width: 100px;
+                        height: 80px;
+                        // overflow: hidden;
+                        margin-right: 10px;
+                        img{
+                            width: 100px;
+                            height: auto;
+                        }
+                    }
+                    .info{
+                        // padding-right: 30px;
+                        overflow: hidden;
+                        font-size: 14px;
+                        line-height: 24px;
+                        .tit{
+                            p:first-child{
+                                font-size: 14px;
+                                text-align: left;
+                                color: #333;
+                                line-height: 20px;
+                            }
+                            p:last-child{
+                                font-size: 100%;
+                                text-align: left;
+                            }
+                        }
+                        .time{
+                            font-size: 12px;
+                                margin-top: 10px;
+                                color: #ee7700;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 底部的布局
+#ct100_foot {
+    margin-top: 30px;
+    background-color: #EFEFEF;
+    .foot-top {
+        height: 34px;
+        width: 100%;
+        display: flex;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        a {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            display: block;
+            color: #666;
+            line-height: 34px;
+            border-right: 1px solid #c4c4c4;
+            font-size: 14px;
+        }
+        a:nth-child(1) {
+            width: 30%;
+        }
+        a:nth-child(2) {
+            width: 30%;
+        }
+        a:nth-child(3) {
+            width: 40%;
+            display: flex;
+            img {
+                display: block;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    .foot-bottom {
+        padding: 15px 0;
+        font-size: 12px;
+        text-align: center;
+        p:nth-child(1) {
+            color: #666;
+            a:first-child {
+                color: red;
+            }
+            a:last-child {
+                color: #000;
+            }
+        }
+        p:nth-child(2) {
+            text-align: center;
+            color: #666;
+        }
+    }
+}

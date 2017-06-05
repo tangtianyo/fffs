@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/couponproduct.css" />
+</head>
+
+<body>
+    <!--头部部分-->
+    <div id="header">
+        <div class="back">
+            <a class="glyphicon glyphicon-menu-left" href="coupon.html"></a>
+        </div>
+        <h1>
+            坑德基优惠券
+        </h1>
+        <div class="home">
+            <a href="javascript:void(0);">
+
+            </a>
+        </div>
+    </div>
+    <!--内容-->
+    <main id="kfcd">
+        <div class="diancan">
+            --点餐前出示手机中的优惠券，即可免费--
+        </div>
+        <div class="kfcd-list">
+            <ul>
+                <!--发送ajzx请求的-->
+            </ul>
+        </div>
+    </main>
+
+    <!--底部的内容-->
+    <footer id="ct100_foot">
+        <div class="foot-top">
+            <a href="javascript:void(0);">登录</a>
+            <a href="javascript:void(0);">注册</a>
+            <a href="#">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <p>
+                <a href="javascript:void(0);">手机app下载</a>
+                <a href="javascript:void(0);">慢慢买手机版</a> --掌上比价商品
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<!--模板的-->
+<script type="text/html" id="xiangqin">
+    {{each result}}
+    <li>
+        <a href="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg">
+            <div class="pic">
+                {{#$value.couponProductImg}}
+            </div>
+            <div class="info">
+                <div class="tit">
+                    <p>{{$value.couponProductName}}</p>
+                    <p>{{$value.couponProductPrice}}</p>
+                </div>
+                <div class="time">
+                    {{$value.couponProductTime}}
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/couponproduct.js"></script>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/gsproduct.css" />
+</head>
+
+<body>
+    <!--头部部分-->
+    <div id="header">
+        <div class="back">
+            <a class="glyphicon glyphicon-menu-left" href="index.html"></a>
+        </div>
+        <h1>
+            凑单品
+        </h1>
+        <div class="home">
+            <a href="javascript:void(0);">
+
+            </a>
+        </div>
+    </div>
+    <!--主体内容-->
+    <main id="gs-product">
+        <div class="list">
+            <div class="hd">
+                <div class="hd-con">
+                    <div id="tsdsd" class="filter">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <span>京东</span>
+                                    <i class="glyphicon glyphicon-triangle-top">
+
+                                    </i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    华北
+                                    <i class="glyphicon glyphicon-triangle-top"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    全部价格
+                                    <i class="glyphicon glyphicon-triangle-top"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </div>
+                </div>
+                <div class="popsort">
+                    <ul>
+                        <!--ajax请求-->
+                    </ul>
+                </div>
+                <div class="popcat">
+                    <ul>
+                        <!--ajax请求-->
+                    </ul>
+                </div>
+                <div class="popprice">
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <p>全部价格</p>
+                                <i class="glyphicon glyphicon-ok"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bd">
+                <ul>
+                    <!--ajax请求的内容-->
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!--底部的内容-->
+    <footer id="ct100_foot">
+        <div class="foot-top">
+            <a href="https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fwww.jd.com%2F">登录</a>
+            <a href="https://reg.jd.com/reg/person?ReturnUrl=https%3A//www.jd.com/">注册</a>
+            <a href="#">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <p>
+                <a href="javascript:void(0);">手机app下载</a>
+                <a href="javascript:void(0);">慢慢买手机版</a> --掌上比价商品
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<!--模板-->
+<script type="text/html" id="tas">
+    {{each result}}
+
+    <li>
+        <a data-type='{{$value.shopId}}' href="javascript:void(0);">
+            <p>{{$value.shopName}}</p>
+            <i class="glyphicon glyphicon-ok"></i>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="sds">
+    {{each result}}
+    <li>
+        <a data-type='{{$value.areaId}}' href="javascript:void(0);">
+            <p>{{$value.areaName}}</p>
+            <i class="glyphicon glyphicon-ok"></i>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="fan">
+    {{each result}}
+    <li>
+        <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+            <div class="pic">
+                <img src="{{$value.productImg}}" alt="">
+            </div>
+            <div class="title">
+                {{$value.productName}}
+            </div>
+            <div class="other">
+                <div class="price">{{$value.productPrice}}</div>
+                <div class="btn">去凑单</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/gsproduct.js"></script>

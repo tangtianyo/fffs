@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="css/chalishijia.css" />
+
+</head>
+
+<body>
+    <!--顶部部分的布局-->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html" title="">
+                <img src="images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="javascript:void(0);">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+    <!--搜素框-->
+    <section id="form-search">
+        <form action="" class="search">
+            <input type="search" name="" placeholder="请输入内容">
+            <input type="button" value="搜索">
+        </form>
+    </section>
+    <!--详细的商品-->
+    <section id="category">
+        <div class="row">
+            <ul class="category-title">
+               
+            </ul>
+        </div>
+    </section>
+    <!--底部的内容-->
+    <footer id="ct100_foot">
+        <div class="foot-top">
+            <a href="javascript:void(0);">登录</a>
+            <a href="javascript:void(0);">注册</a>
+            <a href="javascript:void(0);">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <p>
+                <a href="javascript:void(0);">手机app下载</a>
+                <a href="javascript:void(0);">慢慢买手机版</a> --掌上比价商品
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<!--title分类的隐形模板-->
+<script type="text/html" id="title">
+    {{each result}}
+    <li data-type="{{$value.titleId}}">
+        <div class="xiangxideshang">
+            <a href="javascript:void(0)">{{$value.title}}</a>
+            <span></span>
+        </div>
+        <div class="catsdsa-boot">
+        </div>              
+    </li>
+    {{/each}}
+</script>
+<!--title里面的具体每个分之-->
+<script type="text/html" id="mtvs">
+
+
+    
+    <ul >
+        {{each result}}
+        <li>
+            <a href="productlist.html?categoryid={{$value.categoryId}}&category={{$value.category}}&pageid=1">{{$value.category}}</a>
+
+        </li>
+        {{/each}}
+    </ul>
+    
+
+
+</script>
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/chalishijia.js"></script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>title</title>
+    <link rel = "stylesheet" type="text/css" href = "lib/bootstrap.min.css" / >
+    <link rel = "stylesheet" type="text/css" href = "css/moneyctrl.css" / >
+</head>
+<body>
+    <!--头部部分-->
+    <div id="header">
+        <div class="back">
+            <a class="glyphicon glyphicon-menu-left" href="index.html"></a>
+        </div>
+        <h1>
+            省钱控-最新优惠
+        </h1>
+        <div class="home">
+            <a href="javascript:void(0);">
+
+            </a>
+        </div>
+    </div>
+     <main id="recomnt">
+        <div class="recomnt-nei">
+            <ul>
+                <!--发送ajax-->
+            </ul>
+            <div class="fenyeqi">
+                <span id="shang">
+                    <a  href="javascript:void(0);">上一页</a>
+                </span>
+                <span>
+                    <select id="yeshu">
+                        
+                        
+                        <!--发送ajax请求-->
+                    </select>
+                </span>
+                <span id="xia" >
+                    <a  href="javascript:void(0);">下一页</a>                    
+                </span> 
+            </div>
+        </div>
+    </main>
+      <!--底部的内容-->
+    <footer id="ct100_foot">
+        <div class="foot-top">
+            <a href="javascript:void(0);">登录</a>
+            <a href="javascript:void(0);">注册</a>
+            <a href="#">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部
+            </a>
+        </div>
+        <div class="foot-bottom">
+            <p>
+                <a href="javascript:void(0);">手机app下载</a>
+                <a href="javascript:void(0);">慢慢买手机版</a> --掌上比价商品
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+<!--模板-->
+<script type="text/html" id="xiangqing">
+    {{each result}}
+    <li>
+        <a href="moneypurst.html?productid={{$value.productId}}">
+            <div class="img-left">
+                {{#$value.productImgSm}}
+            </div>
+            <div class="img-right">
+                <div class="neirong">
+                    {{$value.productName}}
+                    <span>{{$value.productPinkage}}</span>
+                </div>
+                <div class="xiangxi">
+                    <span>{{$value.productFrom}}|{{$value.productTime}}</span>
+                    <span>
+                        {{$value.productComCount}}
+                                    
+                    </span>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--页数的模板-->
+<script type="text/html" id="yma">
+    <option class="d1"></option>
+</script>
+
+<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="js/moneyctrl.js"></script>

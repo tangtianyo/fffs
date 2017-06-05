@@ -1,0 +1,217 @@
+@import 'normalize6.0.scss';
+
+html,body{
+    height: 100%;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+.clearfix::before,.clearfix::after{
+    height: 0;
+    content: '';
+    overflow: hidden;
+    clear: both;
+    display: block;
+}
+.clearfix{
+    zoom:1;
+}
+
+
+// 顶部部分的样式
+#header{
+    height: 50px;
+    width: 100%;
+    background: #FF841D;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    >.logo{
+        width: 75%;
+
+        >a{
+            >img{
+                display: block;
+                max-height: 25px;
+                overflow: hidden;
+            }
+        }
+    }
+    >.appdown{
+        >a{
+            >img{
+                display: block;
+                max-height: 34px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+// 搜索框的样式
+#form-search{
+    background-color: white;
+    padding: 0 10px;
+    height: 50px;
+    .search{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input:first-child{
+            height: 30px;
+            flex: .95;
+            background-color: #F1F1F1;
+            border-radius: 30px;
+            padding-left: 15px;
+        }
+        input:last-child{
+            height: 30px;            
+            width: 63px;
+            background-color: #FF841D;
+            border-radius: 30px;    
+            color: white;
+            font-size: 16px;        
+            line-height: 30px;
+        }
+    }
+}
+// 详细商品的样式
+#category{
+    .row{
+        border-radius: 5px;
+        background-color: #ededed;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        color: #666;
+        >.category-title{
+            >li{
+                // position: relative;
+                >.xiangxideshang{
+                    width: 100%;
+                    height: 40px;
+                    padding-left: 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #ccc;
+                    >a{
+                        display: block;
+                        height: 40px;
+                        color: #000;
+                        font-size: 16px;
+                        font-weight: bold;
+                        line-height: 40px;
+                        
+                    }   
+                    >span{
+                        text-align: center;
+                        width: 30px;
+                        height: 10px;
+                        display: block;
+                        background: url('http://www.zuyushop.com/wap/images/arrow1.gif')no-repeat center;
+                    }
+                }
+               >.catsdsa-boot{
+                //    display: none;
+                  background-color: white;
+                    >ul{
+                    display: flex;
+                    flex-wrap: wrap;
+                  
+                    >li{
+                        width: 33.333%;
+                        height: 40px;
+                        border-bottom: 1px solid #ccc;
+                        border-right: 1px solid #ccc;
+                        float: left;
+                        >a{
+                           text-align: center;
+                            height: 40px;
+                            display: block;
+                            width: 100%;
+                            color: #333;
+                            line-height: 40px;
+                        }
+                    }
+                }
+               }
+            }
+        }
+    }
+}
+
+// 底部的布局
+#ct100_foot{
+    margin-top: 30px;
+    background-color: #EFEFEF;
+    .foot-top{
+        height: 34px;
+        width: 100%;
+        display: flex;
+        
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        a{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            display: block;
+            color: #666;
+            line-height: 34px;
+            border-right: 1px solid #c4c4c4;
+            font-size: 14px;
+        }
+        a:nth-child(1){
+            width: 30%;
+        }
+        a:nth-child(2){
+            width: 30%;
+        }
+        a:nth-child(3){
+            width: 40%;
+            display: flex;
+            img{
+                
+                display: block;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    .foot-bottom{
+        padding: 15px 0;
+        font-size: 12px;
+        text-align: center;
+        p:nth-child(1){
+            color: #666;
+            a:first-child{
+                color: red;
+            }
+            a:last-child{
+                color: #000;
+            }
+        }
+        p:nth-child(2){
+            text-align: center;
+            color: #666;
+        }
+    }
+}

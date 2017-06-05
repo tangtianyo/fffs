@@ -1,0 +1,352 @@
+@import 'normalize6.0.scss';
+html,
+body {
+    height: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    height: 0;
+    content: '';
+    overflow: hidden;
+    clear: both;
+    display: block;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+// 头部部分的布局
+#header {
+    height: 50px;
+    background-color: #ff841d;
+    display: flex;
+    align-items: center;
+    .back {
+        width: 30%;
+        height: 50px;
+        >a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+        }
+        a::before {
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+    h1 {
+        width: 60%;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 50px;
+        margin: 0;
+    }
+    .home {
+        width: 30%;
+        height: 50px;
+        >a {
+            margin-left: 30px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            background: url('../images/header_app.png')no-repeat center/32px 32px;
+        }
+    }
+}
+
+// 主体内容的布局样式
+#content {
+    .container {
+        .cu-content {
+            padding: 4px 10px;
+            background-color: #fff;
+            h3 {
+                font-size: 18px;
+                margin: 10px auto 5px auto;
+                font-size: 900;
+                text-align: left;
+                color: #5a5a5a;
+                line-height: normal;
+            }
+            .info {
+                color: #999;
+                margin: 12px auto;
+                font-size: 12px;
+            }
+            .jd-content {
+                .picwrap {
+                    width: 120px;
+                    overflow: hidden;
+                    margin: 12px auto auto 10px;
+                    float: right;
+                    img {
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
+                .conn {
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #606060;
+                    padding-bottom: 20px;
+                    p:nth-child(1) {
+                        line-height: 24px;
+                        margin: 6px auto;
+                    }
+                    p:nth-child(2) {
+                        line-height: 24px;
+                        margin: 6px auto;
+                    }
+                    p:nth-child(3) {
+                        line-height: 24px;
+                        margin: 6px auto;
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .songhuo {
+                width: 138px;
+                background-color: #fff;
+                border-style: solid;
+                box-shadow: 1px 2px 5px rgba(0, 0, 0, .1);
+                border-color: #f1f1f1 #f1f1f1 #ababab #F1F1F1;
+                margin: 0 auto;
+                ul {
+                        li {
+                            font-size: 12px;
+                            line-height: 20px;
+                            a {
+                                display: block;
+                                padding: 0px 10px;
+                                border-bottom: 1px dashed #b0b0b0;
+                                span {
+                                    display: block;
+                                    padding: 0 10px;
+                                    text-align: left;
+                                    strong {
+                                        font-style: normal;
+                                        color: #f27b04;
+                                        float: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+            .golink {
+                a {
+                    display: block;
+                    margin: 20px 10px;
+                    background-color: #ff9000;
+                    height: 30px;
+                    border-radius: 4px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: white;
+                }
+            }
+        }
+        .zhongjian {
+            margin: 20px 10px;
+            text-align: center; // width: 594px;
+            >img {
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+        }
+        .cu-content-pl {
+            .cu-content-box {
+                .tit {
+                    font-size: 16px;
+                    padding: 6px 8px;
+                }
+                .reply {
+                    padding: 6px 8px;
+                    .form {
+                        border: 2px solid #eceae8;
+                        border-radius: 2px;
+                        padding: 4px 0 0 4px;
+                        background-color: #fff;
+                        position: relative;
+                        width: 98%;
+                        margin: 0 auto;
+                        #ctl00_ContentBody_txt_nr {
+                            width: 100%;
+                            resize: none;
+                            overflow-x: hidden;
+                            overflow-y: auto;
+                            border: none;
+                            line-height: 22px;
+                            font-size: 14px;
+                            height: 68px;
+                            color: #666;
+                            outline: 0;
+                        }
+                        .ctrl {
+                            background-color: #fbfbfb;
+                            height: 36px;
+                            margin-left: -4px;
+                            border-top: 1px solid #f2f2f2;
+                            input {
+                                position: absolute;
+                                right: -2px;
+                                bottom: -2px;
+                                font-size: 16px;
+                                background-color: #ff841d;
+                                border: 2px solid #ff841d;
+                                width: 100px;
+                                height: 39px;
+                                color: #fff;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+                #newcomment {
+                    font-size: 16px;
+                    padding: 6px 8px;
+                }
+                .list {
+                    ul {
+                        li {
+                            padding: 18px 10px;
+                            background-color: #fff;
+                            display: flex;
+                            .userimg {
+                                width: 40px;
+                                overflow: hidden;
+                                img {
+                                    width: 40px;
+                                    height: 40px;
+                                    border-radius: 50%;
+                                }
+                            }
+                            .con {
+                                overflow: hidden;
+                                flex: 1;
+                                .name {
+                                    margin-bottom: 6px;
+                                    color: #2e8b01;
+                                    font-size: 14px;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    .username {
+                                        color: #5997c0;
+                                        font-size: 13px;
+                                    }
+                                    .time {
+                                        font-size: 13px;
+                                        color: #999;
+                                    }
+                                }
+                                .content {
+                                    padding-left: 15px;
+                                    font-size: 15px;
+                                    color: #606060;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 底部的布局
+#ct100_foot {
+    margin-top: 30px;
+    background-color: #EFEFEF;
+    .foot-top {
+        height: 34px;
+        width: 100%;
+        display: flex;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        a {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            display: block;
+            color: #666;
+            line-height: 34px;
+            border-right: 1px solid #c4c4c4;
+            font-size: 14px;
+        }
+        a:nth-child(1) {
+            width: 30%;
+        }
+        a:nth-child(2) {
+            width: 30%;
+        }
+        a:nth-child(3) {
+            width: 40%;
+            display: flex;
+            img {
+                display: block;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    .foot-bottom {
+        padding: 15px 0;
+        font-size: 12px;
+        text-align: center;
+        p:nth-child(1) {
+            color: #666;
+            a:first-child {
+                color: red;
+            }
+            a:last-child {
+                color: #000;
+            }
+        }
+        p:nth-child(2) {
+            text-align: center;
+            color: #666;
+        }
+    }
+}

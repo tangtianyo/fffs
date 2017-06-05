@@ -1,0 +1,249 @@
+@import 'normalize6.0.scss';
+html,
+body {
+    height: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.clearfix::before,
+.clearfix::after {
+    height: 0;
+    content: '';
+    overflow: hidden;
+    clear: both;
+    display: block;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+// 头部部分的布局
+#header {
+    height: 50px;
+    background-color: #ff841d;
+    display: flex;
+    align-items: center;
+    .back {
+        width: 30%;
+        height: 50px;
+        >a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+        }
+        a::before {
+            color: white;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+    h1 {
+        width: 60%;
+        height: 50px;
+        color: white;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+        line-height: 50px;
+        margin: 0;
+    }
+    .home {
+        width: 30%;
+        height: 50px;
+        >a {
+            margin-left: 30px;
+            width: 50px;
+            height: 50px;
+            display: block;
+            background: url('../images/header_app.png')no-repeat center/32px 32px;
+        }
+    }
+}
+
+// 中间内容的部分
+#recoment-product {
+    .container {
+        .cu-content {
+            padding: 4px 10px;
+            background-color: #fff;
+            h3 {
+                font-size: 18px;
+                margin: 10px auto 5px auto;
+                font-weight: 900;
+                text-align: left;
+                color: #5a5a5a;
+                padding: 0;
+            }
+            h4 {
+                margin: 0;
+                padding: 0;
+                color: #ff6c00;
+                font-size: 15px;
+            }
+            .info {
+                text-align: left;
+                margin: 12px auto;
+                color: #999999;
+                font-size: 12px;
+                line-height: 24px;
+            }
+            .content {
+                .picwrap {
+                    width: 120px;
+                    float: right;
+                    margin: 12px auto auto 10px;
+                    overflow: hidden;
+                    width: 120px;
+                    height: 120px;
+                    img {
+                        width: 120px;
+                        height: 120px;
+                    }
+                }
+                .conn {
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #606060;
+                    padding-bottom: 20px;
+                    p:first-child {
+                        line-height: 24px;
+                        margin: 6px auto;
+                    }
+                    p:last-child {
+                        margin: 6px auto;
+                        >img {
+                            max-width: 100%;
+                            height: auto;
+                            border: 0;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+            .golink {
+                a {
+                    display: block;
+                    margin: 20px 10px;
+                    background-color: #ff9000;
+                    height: 30px;
+                    border-radius: 4px;
+                    line-height: 30px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: white;
+                }
+            }
+        }
+        .text-align {
+            text-align: center;
+            margin: 20px 10px;
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+            .cu-content-p1 {
+                .tit {
+                    font-size: 16px;
+                    padding: 6px 8px;
+                }
+                .replay {
+                    margin: 6px 8px;
+                    .form {
+                        border: 2px solid #eceae8;
+                        border-radius: 4px;
+                        padding: 4px 0 0 4px;
+                        background-color: #fff;
+                        width: 98%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 底部的布局
+#ct100_foot {
+    margin-top: 30px;
+    background-color: #EFEFEF;
+    .foot-top {
+        height: 34px;
+        width: 100%;
+        display: flex;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        a {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 34px;
+            display: block;
+            color: #666;
+            line-height: 34px;
+            border-right: 1px solid #c4c4c4;
+            font-size: 14px;
+        }
+        a:nth-child(1) {
+            width: 30%;
+        }
+        a:nth-child(2) {
+            width: 30%;
+        }
+        a:nth-child(3) {
+            width: 40%;
+            display: flex;
+            img {
+                display: block;
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    .foot-bottom {
+        padding: 15px 0;
+        font-size: 12px;
+        text-align: center;
+        p:nth-child(1) {
+            color: #666;
+            a:first-child {
+                color: red;
+            }
+            a:last-child {
+                color: #000;
+            }
+        }
+        p:nth-child(2) {
+            text-align: center;
+            color: #666;
+        }
+    }
+}
